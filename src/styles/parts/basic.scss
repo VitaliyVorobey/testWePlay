@@ -17,18 +17,24 @@ body {
   display: table;
 }
 
-.clearfix:after
+.clearfix:after, .clearfix:before
   {
   clear: both;
 }
 
-.hidden {
-  display: none !important;
-}
 
 select {
   cursor: pointer;
   option {
     cursor: pointer;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
 }
