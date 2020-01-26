@@ -1,0 +1,24 @@
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &-visa {
+    background-image: url("#{$imgpath}icon-visa.svg");
+    width: 48px;
+    height: 15.53px;
+  }
+  &-master {
+    background-image: url("#{$imgpath}icon-master.svg");
+    height: 24px;
+    width: 30.85px;
+  }
+  &-amex {
+    background-image: url("#{$imgpath}icon-amex.svg");
+    height: 17.25px;
+    width: 24px;
+
+  }
+
+}
+
+
