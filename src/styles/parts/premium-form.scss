@@ -1,3 +1,86 @@
-.premium-form__ {
-  
+.premium-form {
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 320px;
+    @media (min-width: 640px) {
+      padding-left: 40px;
+      padding-right: 40px;
+      max-width: 560px;
+    }
+    @media (min-width: 1024px) {
+      max-width: 848px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__panel {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    @media (min-width: 640px) {
+      margin-top: 22px;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 85px;
+      flex-direction: row;
+    }
+  }
+  &__aside {
+    width: 100%;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 46px 16px 24px 16px;
+    background-image: url("#{$imgpath}premium-form__bg_mob.jpg");
+    @media (min-width: 640px) {
+      padding: 48px 48px 25px 48px;
+      background-image: url("#{$imgpath}premium-form__bg_tab.jpg");
+    }
+    @media (min-width: 1024px) {
+      max-width: 324px;
+      padding: 48px 24px;
+      border-radius: 8px 0 0 8px;
+      background-image: url("#{$imgpath}premium-form__bg_desk.jpg");
+    }
+  }
+  &__body {
+    border-top: 1px solid $border-color-warning;
+    border-right: 1px solid $border-color-warning;
+    border-bottom: 1px solid $border-color-warning;
+    border-radius: 0 8px 8px 0;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    background: linear-gradient(90deg, #C59639 0%, #E9C467 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $text-warning;
+    font-size: 32px;
+    line-height: (40/32);
+    @media (min-width: 640px) {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+    &:before {
+      content: '';
+      display: flex;
+      flex-shrink: 0;
+      width: 82.36px;
+      height: 24px;
+      font-size: 0;
+      line-height: 0;
+      background-image: url("#{$imgpath}logo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-bottom: 16px;
+    }
+  }
 }
