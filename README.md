@@ -1,10 +1,10 @@
 # Инструкция
-Тестовый Hosting [ссылка](https://theresume-the.firebaseapp.com/)
+Тестовый Hosting [ссылка](https://testweplay.firebaseapp.com/)
 
 
 Скачиваем архив или клонируем себе репозиторий <br />
-[скачать архив](https://github.com/VitaliyVorobey/resume/archive/master.zip)  <br />
-[git clone](https://github.com/VitaliyVorobey/resume.git) <br /> 
+[скачать архив](https://github.com/VitaliyVorobey/testWePlay/archive/master.zip)  <br />
+[git clone](https://github.com/VitaliyVorobey/testWePlay.git) <br /> 
 
 распаковать и перейтив в корень папки. <br />
 
