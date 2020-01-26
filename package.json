@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack --mode development --config webpack.dev.config.js --color",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && firebase deploy",
     "build:clean": "rimraf ./web/build",
     "prebuild": "npm run build:clean"
   },
