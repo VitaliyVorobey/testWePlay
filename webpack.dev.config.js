@@ -121,6 +121,13 @@ module.exports = {
             template: path.resolve(__dirname, 'src/index.html'),
             inject: true,
         }),
+        new HtmlWebpackPlugin({
+            chunksSortMode: "manual",
+            chunks: ['main'],
+            filename: path.resolve(__dirname, 'web/404.html'),
+            template: path.resolve(__dirname, 'src/404.html'),
+            inject: true,
+        }),
 
 
     ],

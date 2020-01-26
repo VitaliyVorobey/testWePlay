@@ -66,6 +66,41 @@ module.exports = merge(common, {
             chunkFilename: "[name].[contenthash].css"
         }),
 
+        new HtmlWebpackPlugin({
+            chunksSortMode: "manual",
+            chunks: ['main'],
+            filename: path.resolve(__dirname, 'web/404.html'),
+            template: path.resolve(__dirname, 'src/404.html'),
+
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true,
+                removeScriptTypeAttributes: true,
+            },
+            inject: true,
+            inlineSource: 'runtime',
+            prefetch: false,
+            preload: ['**/*.css'],
+
+        }),
+
+        new ResourceHintWebpackPlugin(),
+
+        new MiniCssExtractPlugin({
+            chunksSortMode: "manual",
+            chunks: ['main'],
+            filename: "css/[name].[contenthash].css",
+            chunkFilename: "[name].[contenthash].css"
+        }),
+
 
         new HashedModuleIdsPlugin({
             hashFunction: 'sha256',
