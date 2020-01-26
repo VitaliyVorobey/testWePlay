@@ -16,9 +16,19 @@
     background-image: url("#{$imgpath}icon-amex.svg");
     height: 17.25px;
     width: 24px;
-
   }
-
+  &-subtract {
+    background-image: url("#{$imgpath}icon-subtract.svg");
+  }
+  &-union {
+    background-image: url("#{$imgpath}icon-union.svg");
+  }
+  &-star {
+    background-image: url("#{$imgpath}icon-star.svg");
+  }
+  &-statistic {
+    background-image: url("#{$imgpath}icon-statistic.svg");
+  }
 }
 
 

@@ -8,7 +8,7 @@
     @media (min-width: 640px) {
       padding-left: 40px;
       padding-right: 40px;
-      max-width: 560px;
+      max-width: 640px;
     }
     @media (min-width: 1024px) {
       max-width: 848px;
@@ -37,6 +37,7 @@
     overflow: hidden;
     padding: 46px 16px 24px 16px;
     background-image: url("#{$imgpath}premium-form__bg_mob.jpg");
+    border-radius: 8px 8px 0 0;
     @media (min-width: 640px) {
       padding: 48px 48px 25px 48px;
       background-image: url("#{$imgpath}premium-form__bg_tab.jpg");
@@ -49,10 +50,17 @@
     }
   }
   &__body {
-    border-top: 1px solid $border-color-warning;
+    border-left: 1px solid $border-color-warning;
     border-right: 1px solid $border-color-warning;
     border-bottom: 1px solid $border-color-warning;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 0 8px 8px;
+    @media (min-width: 1024px) {
+      border-top: 1px solid $border-color-warning;
+      border-right: 1px solid $border-color-warning;
+      border-bottom: 1px solid $border-color-warning;
+      border-left: none;
+      border-radius: 0 8px 8px 0;
+    }
   }
   &__logo {
     display: flex;
@@ -81,6 +89,67 @@
       background-position: center;
       background-size: contain;
       margin-bottom: 16px;
+    }
+  }
+  &__accordion {
+    display: none;
+    padding: 0;
+    margin: 0;
+    color: $white;
+    @media (min-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-item {
+      display: flex;
+      width: 50%;
+      margin-bottom: 24px;
+      flex-direction: column;
+      @media (min-width: 1024px) {
+        width: 100%;
+      }
+      &-title {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media (min-width: 1024px) {
+          padding-right: 34px;
+          &:after {
+            content: '';
+            display: flex;
+            flex-shrink: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 24px;
+            height: 24px;
+            background-image: url("#{$imgpath}icon-arrow.svg");
+            transform: rotate(180deg);
+          }
+        }
+        &_active &-title:after {
+          transform: rotate(0);
+        }
+        .icon {
+          width: 24px;
+          display: flex;
+          flex-shrink: 0;
+          height: 24px;
+          margin-right: 10px;
+        }
+      }
+      &-text {
+        display: none;
+      }
+      &_active &-text {
+        @media (min-width: 1024px) {
+          display: flex;
+          margin-top: 16px;
+        }
+      }
+
+
     }
   }
 }
