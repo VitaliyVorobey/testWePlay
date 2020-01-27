@@ -16,7 +16,7 @@
                 <div class="premium-form__logo">
                     Premium
                 </div>
-                <ul class="premium-form__accordion">
+                <ul class="premium-form__accordion" id="premiumAccordion">
                     <li class="premium-form__accordion-item premium-form__accordion-item_active">
                         <div class="premium-form__accordion-item-title">
                             <i class="icon icon-subtract"></i>Закрытые турниры
@@ -53,11 +53,11 @@
             </div>
             <div class="premium-form__body">
                     <ul class="premium-form__tabs">
-                        <li class="premium-form__tabs-item premium-form__tabs-item_active"><a href="#cc">Credit card</a></li>
-                        <li class="premium-form__tabs-item"><a href="#pp">PayPal</a></li>
+                        <li class="premium-form__tabs-item premium-form__tabs-item_active" data-value="tab-cc"><a href="#cc">Credit card</a></li>
+                        <li class="premium-form__tabs-item" data-value="tab-pp"><a href="#pp">PayPal</a></li>
                     </ul>
                     <div class="premium-form__tab-content">
-                        <div id="cc" class="premium-form__tab-pane premium-form__tab-pane_active">
+                        <div data-content="tab-cc" class="premium-form__tab-pane premium-form__tab-pane_active">
                             <div class="premium-form__pay-icons">
                                 <i class="icon icon-master"></i>
                                 <i class="icon icon-visa"></i>
@@ -97,7 +97,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div id="pp" class="premium-form__tab-pane ">
+                        <div data-content="tab-pp" class="premium-form__tab-pane ">
                             <p>Подпишись на WePlay! Premium используя PayPal account</p>
                             <a href="/" class="premium-form__btn premium-form__btn_primary premium-form__btn_center premium-form__btn_pay-pal">Перейти на PayPal</a>
                             <div class="premium-form__price-content">
